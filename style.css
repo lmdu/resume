@@ -1,0 +1,156 @@
+*{
+	font-family: "Microsoft YaHei";
+}
+
+body{
+	position: relative;
+}
+
+.avatar{
+	position: absolute;
+	display: block;
+	line-height: 50px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	z-index: 100;
+	left: 20px;
+	top: 30px;
+}
+.avatar img{
+	height: 100px;
+	width: 100px;
+	border: 3px solid #fff;
+	background:#fff;
+	transition:All 0.5s ease-in-out;
+}
+
+.avatar img:hover{
+	transform:rotate(360deg);
+}
+
+
+/* social icons */
+.socialbar{
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+	z-index: 100;
+}
+.socialbar ul li img{
+	opacity: .8;
+}
+.socialbar ul li img:hover{
+	opacity: 1;
+}
+
+/* footer */
+.footer{
+	position: absolute;
+	bottom: 30px;
+	right: 20px;
+	color: #fff;
+	text-align: right;
+	z-index: 100;
+	background: rgba(0,0,0,.6);
+	padding: 10px;
+	font-size: 12px;
+}
+.footer a{
+	color: rgb(246,96,0);
+}
+
+/* Overwriting fullPage.js */
+.section{
+	text-align: center;
+	color: #fff;
+}
+.fp-tooltip{
+	color: #fff;
+}
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+    background: white;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+}
+      
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: #5cb85c;
+    border: 2px solid #fff;
+    animation: pulse 2s infinite;
+}
+
+/* section content */
+.header-title{
+	margin-bottom: 50px;
+	animation-delay: 0.2s;
+}
+.header-icon{
+	margin: 50px 0;
+	animation-delay: 0.4s;
+}
+
+#edu-table{
+	animation-delay: 0.8s;
+}
+/*papers */
+.paper{
+	
+}
+.paper strong{
+	text-decoration: underline;
+	font-size: 16px;
+}
+.paper .meta{
+	margin-top: 15px;
+}
+.paper .meta .journal{
+	font-weight: bold;
+	font-style: italic;
+}
+.paper .links{
+	margin-top: 20px;
+	text-align: center;
+}
+
+/* page down icon in first page */
+.page-down-icon{
+	background:url(imgs/page_down.png) no-repeat;
+	width: 30px;
+	height: 34px;
+	position: absolute;
+	left: 50%;
+	margin-left: -15px;
+	z-index: 999;
+	animation:downpage 2s infinite;
+}
+
+@keyframes downpage{
+	0%{bottom:4%;}
+	50%{bottom:2%;}
+	100%{bottom:4%;}
+}
+
+@keyframes pulse{
+	0% {background: transparent;}
+	50% {opacity:1; background:#5cb85c;}
+	100% {background: transparent;}
+}
+
+/* overwrite slick */
+.slick-slide:focus { outline: none; }
+
+/*overwrite bootstrip */
+.progress{
+	width: 100px;
+}
